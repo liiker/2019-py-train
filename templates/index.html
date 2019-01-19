@@ -1,33 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "layout.html" %}
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="/static/css/index.css" />
-  <title>Test file</title>
-</head>
-
-<body>
-  <div class="header">
-    <div class="title">
-      My blog
-    </div>
-    <img src="/static/image/python.jpg" alt="" srcset="">
-  </div>
-  <div class="content">
-    {% for p in posts %}
-    <div class="article-item">
-      <div class="arc-title">{{ p.title }}</div>
-      <div class="arc-abs">{{ p.abs }}</div>
-    </div>
-    {% endfor %}
-  </div>
-  <div class="footer">copyright xxx@xxx</div>
-
-</body>
-
-<script src="/static/js/index.js"></script>
-
-</html>
+{% block content %}
+{% for p in posts %}
+<div class="article-item">
+  <div class="arc-title">{{ p.title }}</div>
+  <div class="arc-abs"><img src="{{ p.image }}" style="width:550px;" /></div>
+  <div class="arc-abs">{{ p.content }}</div>
+</div>
+{% endfor %}
+{% endblock %}

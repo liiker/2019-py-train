@@ -8,6 +8,14 @@ body {
   background-color: indigo;
 }
 
+.send-post {
+  font-size: 0.5em;
+  color: #fff;
+  text-align: right;
+  margin-right: 20px;
+  padding-bottom: 10px;
+}
+
 .header img {
   width: 100px;
   position: absolute;
